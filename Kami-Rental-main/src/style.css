@@ -1,0 +1,96 @@
+body{
+  background: rgb(232, 233, 234);
+}
+
+.sidebar{
+    background-color: white;
+    width: 50%;
+    margin-left: 50%;
+    height: 900px;
+    position: fixed;
+    z-index: 5;
+    border: 1px;
+    border-color:black;
+    border-style: solid;
+  }
+
+  .sidebar-button{
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .category1{
+    display: none;
+  }
+
+  /* #head1 {
+    display: flex;
+  } */
+
+
+@media (max-width: 768px) {
+    .buttonnav {
+        display: none;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    .responsive-item {
+        display: none;
+    }
+}
+
+/* Untuk ukuran layar dengan lebar kurang dari atau sama dengan 768px (mode smartphone) */
+@media (max-width: 768px) {
+
+    /* Menghilangkan div.phone pada mode smartphone */
+    .phone {
+        display: none;
+    }
+
+    /* Menghilangkan div.Gmail pada mode smartphone */
+    .Gmail {
+        display: none;
+    }
+
+    /* Menghilangkan div.alarm pada mode smartphone */
+    .alarm {
+        display: none;
+    }
+
+    
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .p-3{
+        display: none;
+    }
+    .sidebar-button{
+        display: block;
+        width: 80px;
+    }
+    .category1{
+        display: block;
+    }
+
+    #head1{
+        width: 60%;
+    }
+
+    #head2{
+        width: 40%;
+    }
+    
+    #btnknsl{
+        width: 100%;
+    }
+
+    
+
+}

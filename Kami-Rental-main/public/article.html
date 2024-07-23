@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KamiRental</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            background: rgb(232, 233, 234);
+        }
+    </style>
+    <div class="sidebar" style="background-color: rgb(87, 1, 1)">
+        <span type="button" class="close-modal" id="close-modal" style="margin-left: 90%; "><span
+                data-feather="menu"></span></span>
+        <h2 style="text-align: center; color: white;">Navigasi</h2>
+        <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <span data-feather="home"></span>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span data-feather="shopping-bag"></span>
+                        Rental
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span data-feather="shopping-cart"></span>
+                        Sales
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span data-feather="paperclip"></span>
+                        Article
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span data-feather="help-circle"></span>
+                        Q & A
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span data-feather="book-open"></span>
+                        Catalouge
+                    </a>
+                </li>
+            </ul>
+
+
+            </ul>
+        </div>
+    </div>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg"
+        style="background-color: rgb(138, 0, 0); border-radius: 5px; border-style: solid; border-color: rgb(255, 255, 255); border-width: 5px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/assets/LogoKrB.png" class="img-fluid"
+                    style="width: 100%; max-width: 105px; height: auto; margin-left: 15px"><br>
+                <span class="navbar-brand mb-0 h1 "
+                    style="color: white; font-size: 20px; text-shadow: -1px -1px 0 #000000; margin-left: 18px;">
+                    <span style="color: black;">Kami</span> <span style="color: red;">Rental</span>
+                </span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- button buat navbar -->
+            <button type="button" class="sidebar-button btn-outline-warning" id="sidebar-button"
+                style="width: 20%; height: 30px; border-radius: 10px; margin-left: 85%; ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+            <!-- end navbar button -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="row">
+                    <!-- -sm-6 col-md-9 -->
+                    <div class="col-sm-6 col-md-9">
+                        <div class="phone" style="margin-bottom: 10px; margin-top: 20px;">
+                            <img src="/assets/phone.png" class="img-fluid"
+                                style="width: 100%; max-width: 20px; height: auto;">
+                            <span style="margin-left: 5px; color: white; font-size: 1.2vw;">085-8808-66555</span>
+                        </div>
+                        <div class="Gmail" style="margin-bottom: 10px;">
+                            <img src="/assets/gmail.png" class="img-fluid"
+                                style="width: 100%; max-width: 20px; height: auto;">
+                            <span style="margin-left: 5px; color: white; font-size: 1.2vw;">rental@kamirental.com</span>
+                        </div>
+                        <div class="alarm">
+                            <img src="/assets/alarm.png" class="img-fluid"
+                                style="width: 100%; max-width: 20px; height: auto;">
+                            <span style="margin-left: 5px; color: white; font-size: 1.2vw;">08:00 - 22:00 (Monday to
+                                Sunday)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonnav">
+                    <div class="container" style="margin-left: 30%;">
+                        <div class="row" style="margin-bottom: 10px; ">
+                            <div class="col">
+                                <a href="#" class="me-3">
+                                    <img src="/assets/instagram.png" alt="instagram "
+                                        style="width: 40px; height: auto;">
+                                </a>
+                                <a href="#" class="me-3">
+                                    <img src="/assets/facebook.png" alt="facebook" style="width: 40px; height: auto;">
+                                </a>
+                                <a href="#" class="me-3">
+                                    <img src="/assets/twit.png" alt="twit" style="width: 40px; height: auto;">
+                                </a>
+                                <a href="#" class="me-3">
+                                    <img src="/assets/whatsapp.png" alt="whatsapp" style="width: 40px; height: auto;">
+                                </a>
+                                <a href="#" class="me-3">
+                                    <img src="/assets/youtube.png" alt="youtube" style="width: 40px; height: auto;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-warning me-1">Home</button>
+                                <button type="button" class="btn btn-outline-warning me-1">Rental</button>
+                                <button type="button" class="btn btn-outline-warning me-1">Sales</button>
+                                <button type="button" class="btn btn-outline-warning me-1">Article</button>
+                                <button type="button" class="btn btn-outline-warning me-1">Q & A</button>
+                                <button type="button" class="btn btn-outline-warning me-1">Catalouge</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- End Header -->
+
+    <!-- Featured Products Section -->
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
+                    style="width: 100%; height: 400px; background-color: #00000000; border-color: #000000; border-width: 2px; border-style: solid; border-radius: 15px; overflow: hidden;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/Paket Lighting.jpg" class="d-block w-100 img-fluid" alt="..."
+                                style=" height: 400px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/Paket Lighting.jpg" class="d-block w-100 img-fluid" alt="..."
+                                style=" height: 400px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/Paket Lighting.jpg" class="d-block w-100 img-fluid" alt="..."
+                                style=" height: 400px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Garis tengah 1 -->
+    <div class="card-footer"
+        style="background-color: rgb(138, 0, 0); margin-top: 20px; border-radius: 5px; border-style: solid; border-color: rgb(255, 255, 255); border-width: 5px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); color: white;">
+        <div class="col">
+            <button type="button" class="btn btn-outline-warning"
+                style="float: right; float: right; margin-right: 10px;">Lihat Artikel</button>
+        </div>
+        <p>Artikel</p>
+    </div>
+
+    <!-- konten produk -->
+
+    <!-- Isi ke 1 -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" style="margin-left: 2%; margin-top: 2%;">
+            <!-- konten 1 -->
+            <div class="col" style="margin-bottom: 20px;">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 2 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 3 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 4 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Isi ke 2 -->
+            <!-- konten 5 -->
+            <div class="col" style="margin-bottom: 20px;">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 6 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 7 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 8 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Isi ke 3 -->
+            <!-- konten 9 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 10 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 11 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- konten 12 -->
+            <div class="col">
+                <div class="card" style="width: 18rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); border-radius: 20px;">
+                    <a href="#">
+                        <img src="/assets/LogoKrB.png" class="card-img-top" alt="..."
+                            style="box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); border-bottom: 1px solid #000000;">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" style="text-decoration: none; color: #000000; opacity: 0.5;"><span>Led
+                                Panel</span></a> <br>
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <h5>Modul led screen</h5>
+                        </a>
+                        <h4 style="color: orange;">Rp50.000<span
+                                style="color: #000000; opacity: 0.5; font-size: medium;">/m</span></h4>
+                        <h6 style="color: gray;">min. pesanan: 4m
+                            <a href="#"><img src="/assets/chat.png" alt="..."
+                                    style="width: 20%; height: 50px; margin-left: 27%;"></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer paling bawah -->
+    <footer class="bg-body-tertiary text-center text-lg-start" style="background-color: rgb(138, 0, 0)">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <span style="color: black; margin-left: 30px; font-size: 1.5vw;">Kami</span> <span
+                        style="color: red; font-size: 1.5vw;">Rental</span>
+
+                    <ul style="font-size: 1vw;">
+                        KM15, Jalanraya Jakarta Bogor,
+                        No.15 Kp. Bedahan, Cibinong, Bogor, Jawa Barat.
+                        Tel : 085-8808-66555
+                        Email : admin@kamirental.com
+
+                    </ul>
+                    <ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6014639227574!2d106.83635887769321!3d-6.445187376905279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ea14cd993331%3A0x54b54094f06406ca!2sJl.%20Kampung%20Bedahan%20No.15%2C%20Kalibaru%2C%20Kec.%20Cilodong%2C%20Kota%20Depok%2C%20Jawa%20Barat%2016414!5e0!3m2!1sid!2sid!4v1705078158876!5m2!1sid!2sid"
+                            width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column2-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <h5 class="text-uppercase mb-0" style="color: black;">INFORMATION</h5>
+
+                    <ul class="list-group" style="margin-left: 20px;">
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Delivery Information</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">How To Rent</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Support Project</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Register As A Partner</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Article</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column3-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <h5 class="text-uppercase" style="color: black;">Customer Service</h5>
+
+                    <ul class="list mb-0">
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Return</a>
+                        </li>
+                    </ul>
+                    <h5 class="text-uppercase" style="color: black;">My Account</h5>
+
+                    <ul class="list mb-0">
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">My Account</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Order History</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Wish List</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column4-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <h5 class="text-uppercase mb-0" style="color: black;">Metode Pembayaran</h5>
+                    <br>
+                    <ul class="list-unstyled">
+                        <img src="/assets/bca.png" alt="" style="width: 100%; max-width: 100px; height: auto;">
+                        <img src="/assets/mandiri.png" alt="" style="width: 100%; max-width: 130px; height: auto; border-radius: 10px;">
+                    </ul>
+                    <h5 class="text-uppercase mb-0" style="color: black;">Live Chat</h5>
+                    <br>
+                    <ul class="list-group">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="/assets/whatsappijo.png" alt="" style="width: 100%; max-width: 70px; height: auto;">
+                            </div>
+                            <div class="col-9">
+                        <span >Butuh Bantuan?</span> <br>
+                        <span >Hubungi Kami Sekarang</span>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body" href="">KamiRental.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+
+    <script>feather.replace();</script>
+    <!-- <script>$('.carousel').carousel({interval: 2000})</script> -->
+</body>
+
+</html>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var showButton = document.getElementById('sidebar-button');
+        var closeButton = document.getElementById('close-modal');
+        var elements = document.querySelectorAll('.sidebar');
+
+        showButton.addEventListener('click', function () {
+            elements.forEach(function (element) {
+                element.style.display = 'block';
+            });
+        });
+
+        closeButton.addEventListener('click', function () {
+            elements.forEach(function (element) {
+                element.style.display = 'none';
+            });
+        });
+        elements.forEach(function (element) {
+            element.style.display = 'none';
+        });
+    });
+</script>

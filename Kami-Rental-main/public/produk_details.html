@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KamiRental</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/sidebar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+    <div class="sidebar" style="background-color: rgb(87, 1, 1); overflow-y: auto; height: 100vh;">
+        <span type="button" class="close-modal" id="close-modal" style="margin-left: 90%; "><span
+                data-feather="menu"></span></span>
+        <h2 style="text-align: center; color: white;">Navigasi</h2>
+        <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">
+                        <span data-feather="home"></span>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        <span data-feather="shopping-bag"></span>
+                        Rental
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        <span data-feather="shopping-cart"></span>
+                        Sales
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        <span data-feather="paperclip"></span>
+                        Article
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        <span data-feather="help-circle"></span>
+                        Q & A
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        <span data-feather="book-open"></span>
+                        Catalouge
+                    </a>
+                </li>
+            </ul>
+
+            <br>
+            <br>
+
+            <ul class="d-flex pb-3 mb-3 border-bottom">
+                <span class="fs-5 fw-semibold" style="color: white;">Category</span>
+            </ul>
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button class="btn" style="color: white; width: 100%; text-align: start;" data-bs-toggle="collapse"
+                        data-bs-target="#SoundSystem-collapse" aria-expanded="true">
+                        Sound System
+                    </button>
+                    <div class="collapse show" id="SoundSystem-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Overview</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Updates</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Reports</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#LightingSystem-collapse" aria-expanded="false" style="color: white;">
+                        Lighting System
+                    </button>
+                    <div class="collapse" id="LightingSystem-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Overview</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Weekly</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Monthly</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Annually</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#SpecialEffect-collapse" aria-expanded="false" style="color: white;">
+                        Special Effect
+                    </button>
+                    <div class="collapse" id="SpecialEffect-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#Multimedia-collapse" aria-expanded="false" style="color: white;">
+                        Multimedia
+                    </button>
+                    <div class="collapse" id="Multimedia-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#DiskJockey-collapse" aria-expanded="false" style="color: white;">
+                        Disk Jockey
+                    </button>
+                    <div class="collapse" id="DiskJockey-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#Panggung-collapse" aria-expanded="false" style="color: white;">
+                        Panggung
+                    </button>
+                    <div class="collapse" id="Panggung-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#Tenda-collapse" aria-expanded="false" style="color: white;">
+                        Tenda
+                    </button>
+                    <div class="collapse" id="Tenda-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#AlatPesta-collapse" aria-expanded="false" style="color: white;">
+                        Alat Pesta
+                    </button>
+                    <div class="collapse" id="AlatPesta-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#GensetStabilizer-collapse" aria-expanded="false" style="color: white;">
+                        Genset & Stabilizer
+                    </button>
+                    <div class="collapse" id="GensetStabilizer-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#ACCoolingFan-collapse" aria-expanded="false" style="color: white;">
+                        AC & Cooling Fan
+                    </button>
+                    <div class="collapse" id="ACCoolingFan-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#EventSupport-collapse" aria-expanded="false" style="color: white;">
+                        Event Support
+                    </button>
+                    <div class="collapse" id="EventSupport-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#FullPaketEvent-collapse" aria-expanded="false" style="color: white;">
+                        Full Paket Event
+                    </button>
+                    <div class="collapse" id="FullPaketEvent-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#CustomRequest-collapse" aria-expanded="false" style="color: white;">
+                        Custom Request
+                    </button>
+                    <div class="collapse" id="CustomRequest-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="border-top my-3"></li>
+            </ul>
+
+
+            </ul>
+        </div>
+    </div>
+    <!-- Header -->
+    <div class="container-fluid" style="margin-top: 10px;">
+        <div class="row">
+            <div class="col">
+                <header class="header">
+                    <nav class="navbar"
+                        style="background-color: rgb(138, 0, 0); width: 100%; height: 180px; border-radius: 5px; border-style: solid; border-color: rgb(255, 255, 255); border-width: 5px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);">
+                        <div class="container-fluid">
+                            <div class="row g-0">
+
+                                <!-- button buat navbar -->
+                                <button type="button" class="sidebar-button btn-outline-warning" id="sidebar-button"
+                                    style="width: 20%; height: 30px; border-radius: 10px; margin-left: 85%; ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-list" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                                    </svg>
+                                </button>
+                                <!-- end navbar button -->
+
+                                <div class="col-6 col-md-3">
+                                    <img src="/assets/LogoKrB.png" class="img-fluid"
+                                        style="width: 100%; max-width: 105px; height: auto; margin-left: 15px;">
+                                    <span class="navbar-brand mb-0 h1 "
+                                        style="color: white; font-size: 20px; text-shadow: -1px -1px 0 #000000; margin-left: 20px;">
+                                        <span style="color: black;">Kami</span> <span style="color: red;">Rental</span>
+                                    </span>
+                                </div>
+                                <div class="col-sm-6 col-md-9">
+                                    <div class="phone" style="margin-bottom: 10px; margin-top: 20px;">
+                                        <img src="/assets/phone.png" class="img-fluid"
+                                            style="width: 100%; max-width: 20px; height: auto;">
+                                        <span
+                                            style="margin-left: 5px; color: white; font-size: 1.2vw;">085-8808-66555</span>
+                                    </div>
+                                    <div class="Gmail" style="margin-bottom: 10px;">
+                                        <img src="/assets/gmail.png" class="img-fluid"
+                                            style="width: 100%; max-width: 20px; height: auto;">
+                                        <span
+                                            style="margin-left: 5px; color: white; font-size: 1.2vw;">rental@kamirental.com</span>
+                                    </div>
+                                    <div class="alarm">
+                                        <img src="/assets/alarm.png" class="img-fluid"
+                                            style="width: 100%; max-width: 20px; height: auto;">
+                                        <span style="margin-left: 5px; color: white; font-size: 1.2vw;">08:00 - 22:00
+                                            (Monday to Sunday)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="buttonnav btnresp">
+                                <div class="container btnresp">
+                                    <div class="row" style="margin-bottom: 10px; ">
+                                        <div class="col">
+                                            <a href="">
+                                                <img src="/assets/instagram.png" alt="instagram "
+                                                    style="width: 100px; max-width: 40px; height: auto;">
+                                            </a>
+                                            <a href="">
+                                                <img src="/assets/facebook.png" alt="instagram"
+                                                    style="width: 100px; max-width: 40px; height: auto; margin-left: 10px;">
+                                            </a>
+                                            <a href="#">
+                                                <img src="/assets/twit.png" alt="instagram"
+                                                    style="width: 100px; max-width: 40px; height: auto; margin-left: 10px;">
+                                            </a>
+                                            <a href="#">
+                                                <img src="/assets/whatsapp.png" alt="instagram"
+                                                    style="width: 100px; max-width: 40px; height: auto; margin-left: 10px;">
+                                            </a>
+                                            <a href="#">
+                                                <img src="/assets/youtube.png" alt="instagram"
+                                                    style="width: 100px; max-width: 40px; height: auto; margin-left: 10px;">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row btnresp">
+                                        <div class="col btnresp">
+                                            <button type="button" class="btn btn-outline-warning home">Home</button>
+                                            <button type="button" class="btn btn-outline-warning">Rental</button>
+                                            <button type="button" class="btn btn-outline-warning">Sales</button>
+                                            <button type="button" class="btn btn-outline-warning">Article</button>
+                                            <button type="button" class="btn btn-outline-warning">Q & A</button>
+                                            <button type="button" class="btn btn-outline-warning">Catalouge</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </nav>
+
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="category1 container-fluid" id="category1">
+        <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="buttonCattegory"
+                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Category1
+            </button>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuClickableInside" style="width: max-content;">
+                <!-- <ul class="list-unstyled ps-0 dropdown-menu bg-dark"> -->
+                <li class="mb-1">
+                    <button class="btn" style="color: white; text-align: start;" data-bs-toggle="collapse"
+                        data-bs-target="#SoundSystem-collapse" aria-expanded="true">
+                        Sound System
+                    </button>
+                    <div class="collapse show" id="SoundSystem-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Overview</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Updates</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Reports</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#LightingSystem-collapse" aria-expanded="false" style="color: white;">
+                        Lighting System
+                    </button>
+                    <div class="collapse" id="LightingSystem-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Overview</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Weekly</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Monthly</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Annually</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#SpecialEffect-collapse" aria-expanded="false" style="color: white;">
+                        Special Effect
+                    </button>
+                    <div class="collapse" id="SpecialEffect-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#Multimedia-collapse" aria-expanded="false" style="color: white;">
+                        Multimedia
+                    </button>
+                    <div class="collapse" id="Multimedia-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#DiskJockey-collapse" aria-expanded="false" style="color: white;">
+                        Disk Jockey
+                    </button>
+                    <div class="collapse" id="DiskJockey-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#Panggung-collapse" aria-expanded="false" style="color: white;">
+                        Panggung
+                    </button>
+                    <div class="collapse" id="Panggung-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#Tenda-collapse" aria-expanded="false" style="color: white;">
+                        Tenda
+                    </button>
+                    <div class="collapse" id="Tenda-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#AlatPesta-collapse" aria-expanded="false" style="color: white;">
+                        Alat Pesta
+                    </button>
+                    <div class="collapse" id="AlatPesta-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#GensetStabilizer-collapse" aria-expanded="false" style="color: white;">
+                        Genset & Stabilizer
+                    </button>
+                    <div class="collapse" id="GensetStabilizer-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#ACCoolingFan-collapse" aria-expanded="false" style="color: white;">
+                        AC & Cooling Fan
+                    </button>
+                    <div class="collapse" id="ACCoolingFan-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#EventSupport-collapse" aria-expanded="false" style="color: white;">
+                        Event Support
+                    </button>
+                    <div class="collapse" id="EventSupport-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#FullPaketEvent-collapse" aria-expanded="false" style="color: white;">
+                        Full Paket Event
+                    </button>
+                    <div class="collapse" id="FullPaketEvent-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#CustomRequest-collapse" aria-expanded="false" style="color: white;">
+                        Custom Request
+                    </button>
+                    <div class="collapse" id="CustomRequest-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a></li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Processed</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Shipped</a>
+                            </li>
+                            <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">Returned</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="border-top my-3"></li>
+                <!-- </ul> -->
+            </ul>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- sidebar -->
+    <div class="container" style="border-color: #000000; margin-top: 10px">
+        <div class="row row-cols-auto" style="border-color: #000000;">
+            <div class="col-3 container-fluid">
+                <div class="flex-shrink-0 p-3"
+                    style="width: 100%; max-width: 300px; margin-left: 60px; margin-top: 20px; height: auto; background-color: #8a0000; border-radius: 5px; border-style: solid; border-color: rgb(255, 255, 255); border-width: 5px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); color: white;">
+                    <ul class="d-flex pb-3 mb-3 border-bottom">
+                        <span class="fs-5 fw-semibold">Category</span>
+                    </ul>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                            <button class="btn" style="color: white; width: 100%; text-align: start;"
+                                data-bs-toggle="collapse" data-bs-target="#SoundSystem-collapse" aria-expanded="true">
+                                Sound System
+                            </button>
+                            <div class="collapse show" id="SoundSystem-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Overview</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Updates</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Reports</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#LightingSystem-collapse" aria-expanded="false" style="color: white;">
+                                Lighting System
+                            </button>
+                            <div class="collapse" id="LightingSystem-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Overview</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Weekly</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Monthly</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Annually</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#SpecialEffect-collapse" aria-expanded="false" style="color: white;">
+                                Special Effect
+                            </button>
+                            <div class="collapse" id="SpecialEffect-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#Multimedia-collapse" aria-expanded="false" style="color: white;">
+                                Multimedia
+                            </button>
+                            <div class="collapse" id="Multimedia-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#DiskJockey-collapse" aria-expanded="false" style="color: white;">
+                                Disk Jockey
+                            </button>
+                            <div class="collapse" id="DiskJockey-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#Panggung-collapse" aria-expanded="false" style="color: white;">
+                                Panggung
+                            </button>
+                            <div class="collapse" id="Panggung-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#Tenda-collapse" aria-expanded="false" style="color: white;">
+                                Tenda
+                            </button>
+                            <div class="collapse" id="Tenda-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#AlatPesta-collapse" aria-expanded="false" style="color: white;">
+                                Alat Pesta
+                            </button>
+                            <div class="collapse" id="AlatPesta-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#GensetStabilizer-collapse" aria-expanded="false" style="color: white;">
+                                Genset & Stabilizer
+                            </button>
+                            <div class="collapse" id="GensetStabilizer-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#ACCoolingFan-collapse" aria-expanded="false" style="color: white;">
+                                AC & Cooling Fan
+                            </button>
+                            <div class="collapse" id="ACCoolingFan-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#EventSupport-collapse" aria-expanded="false" style="color: white;">
+                                Event Support
+                            </button>
+                            <div class="collapse" id="EventSupport-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#FullPaketEvent-collapse" aria-expanded="false" style="color: white;">
+                                Full Paket Event
+                            </button>
+                            <div class="collapse" id="FullPaketEvent-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#CustomRequest-collapse" aria-expanded="false" style="color: white;">
+                                Custom Request
+                            </button>
+                            <div class="collapse" id="CustomRequest-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded btn-toggle" style="color: white;">New</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Processed</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Shipped</a>
+                                    </li>
+                                    <li><a href="#" class="link-dark rounded btn-toggle"
+                                            style="color: white;">Returned</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- content -->
+            <div class="col-sm-8" style="border-color: #000000;">
+                <div class="card" style="margin-top: 10px;">
+                    <div class="container" style="height: 50px; padding-right: 0px; padding-left: 0px;">
+                        <div class="row g-0" style="background-color: #f1975b;">
+                            <div class="col-sm-6 col-md-8 text-center text-uppercase fw-bold" id="head1"
+                                style="margin-top: 15px;">Produk Details</div>
+                            <div class="btn bg-dark col-6 col-md-4" id="head2"
+                                style="height: 50px; width: 280; color: white; font-size: 1vw;">
+                                Check Article tentang Lighting di sini
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-top: 10px;">
+                    <div class="row g-0 row-cols-1">
+                        <div class="col-6">
+                            Category: Rental, Lighting System, Lighting
+                        </div>
+                        <div class="col-6">
+                            <div class="btn-success fw-bold rounded" style="width: 170px;" id="btnknsl">
+                                <img src="/assets/whatsappijo.png" alt="..." width="40px">
+                                Konsultasi
+                            </div>
+                        </div>
+                        <!-- <div class="col-3">
+                            
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="container fw-bold fs-4 rounded" style="margin-top: 10px; background-color: #ecb404;">
+                    <p style="text-align: center; margin-top: 15px;">Moving Head Beam 230 7R</p>
+                </div>
+
+                <div class="container px-4" style="margin-top: 10px;">
+                    <div class="row gx-5 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
+                        <div class="col col-auto col-md-6">
+                            <img src="/assets/LogoKrB.png" class="img-thumbnail" alt="..."
+                                style="margin-top: 10px; border-radius: 15%;">
+
+                            <div class="card"
+                                style="margin-top: 10px; background-color: #e82424; border-color: #4874c4;">
+                                <div class="card-body">
+                                    <div class="row g-0">
+                                        <h5 class="text-center" style="color: yellow;">Rp.500.000/Unit/Hari</h5>
+                                        <p class="text-center mb-0 text-light">*Min. Pesanan 2 units/Hari</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-auto col-md-6">
+                            <div class="container text-start"
+                                style="border-radius: 15px; margin-top: 10px; background-color: #4874c4;">
+                                <div class="card-body">
+                                    <h3 class="card-title text-warning ms-">Item Specification</h3>
+                                    <ul class="text-light">
+                                        <li>Power 220VAC</li>
+                                        <li>Jarak</li>
+                                        <li>Control by DMX512 Signal</li>
+                                    </ul>
+                                    <!-- <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a> -->
+                                </div>
+                            </div>
+                            <div class="container" style="padding-right: 0; padding-left: 0;">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <h6>Jumlah/Kuantitas:</h6>
+                                        <h6>Subtotal:</h6>
+                                    </div>
+                                    <div class="col-7" style="padding-left: 0; padding-right: 0;">
+                                        <!-- tampilan jumlah beserta button tambah dan kurang -->
+                                        <!-- subtotal harga -->
+                                        <!-- keranjang pesan skrg --> <br> <br> <br>
+                                        <div class="btn btn-success">
+                                            Tambah ke keranjang
+                                            <img src="/assets/cart.png" alt="" style="width: 10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-top: 10px; font-size: 1vw;">
+                    <div class="card-body" style="padding-bottom: 0; padding-left: 0; padding-right: 0;">
+                        <div class="row g-0">
+                            <div class="btn btn-warning rounded-0 btn-outline-dark col-3" style="font-size: 1vw;">ITEMS TO SUPLY</div>
+                            <div class="btn btn-warning rounded-0 btn-outline-dark col-3" style="font-size: 1vw;">DIREKOMENDASIKAN</div>
+                            <div class="btn btn-warning rounded-0 btn-outline-dark col-3" style="font-size: 1vw;">S&K BERLAKU</div>
+                            <div class="btn btn-warning rounded-0 btn-outline-dark col-3" style="font-size: 1vw;">OTHERS</div>
+                        </div>
+                    </div>
+                    <div class="card-body bg-primary" style="border-style: solid; margin-bottom: 10px;">
+                        <h3 class="card-title text-warning ms-">Item Dalam Paket ini</h3>
+                        <ul class="text-light">
+                            <li>2 Units Moving Head Beam 230 7R + 1 Hardcase</li>
+                            <li>2 Cable Power</li>
+                            <li>2 Cable DMX512 1M</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- footer paling bawah -->
+    <footer class="bg-body-tertiary text-center text-lg-start" style="background-color: rgb(138, 0, 0)">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <span style="color: black; margin-left: 30px; font-size: 1.5vw;">Kami</span> <span
+                        style="color: red; font-size: 1.5vw;">Rental</span>
+
+                    <ul style="font-size: 1vw;">
+                        KM15, Jalanraya Jakarta Bogor,
+                        No.15 Kp. Bedahan, Cibinong, Bogor, Jawa Barat.
+                        Tel : 085-8808-66555
+                        Email : admin@kamirental.com
+
+                    </ul>
+                    <ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6014639227574!2d106.83635887769321!3d-6.445187376905279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ea14cd993331%3A0x54b54094f06406ca!2sJl.%20Kampung%20Bedahan%20No.15%2C%20Kalibaru%2C%20Kec.%20Cilodong%2C%20Kota%20Depok%2C%20Jawa%20Barat%2016414!5e0!3m2!1sid!2sid!4v1705078158876!5m2!1sid!2sid"
+                            width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column2-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <h5 class="text-uppercase mb-0" style="color: black;">INFORMATION</h5>
+
+                    <ul class="list-group" style="margin-left: 20px;">
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Delivery
+                                Information</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">How To Rent</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Support Project</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Terms &
+                                Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Register As A
+                                Partner</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="color: white; text-decoration: none;">Article</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column3-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <h5 class="text-uppercase" style="color: black;">Customer Service</h5>
+
+                    <ul class="list mb-0">
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Return</a>
+                        </li>
+                    </ul>
+                    <h5 class="text-uppercase" style="color: black;">My Account</h5>
+
+                    <ul class="list mb-0">
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">My Account</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Order History</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Wish List</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text" style="text-decoration: none; color: white;">Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column4-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="color: aliceblue;">
+                    <h5 class="text-uppercase mb-0" style="color: black;">Metode Pembayaran</h5>
+                    <br>
+                    <ul class="list-unstyled">
+                        <img src="/assets/bca.png" alt="" style="width: 100%; max-width: 100px; height: auto;">
+                        <img src="/assets/mandiri.png" alt=""
+                            style="width: 100%; max-width: 130px; height: auto; border-radius: 10px;">
+                    </ul>
+                    <h5 class="text-uppercase mb-0" style="color: black;">Live Chat</h5>
+                    <br>
+                    <ul class="list-group">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="/assets/whatsappijo.png" alt=""
+                                    style="width: 100%; max-width: 70px; height: auto;">
+                            </div>
+                            <div class="col-9">
+                                <span>Butuh Bantuan?</span> <br>
+                                <span>Hubungi Kami Sekarang</span>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body" href="">KamiRental.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+
+
+
+    <script>feather.replace();</script>
+    <!-- <script>$('.carousel').carousel({interval: 2000})</script> -->
+</body>
+
+</html>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var showButton = document.getElementById('sidebar-button');
+        var closeButton = document.getElementById('close-modal');
+        var elements = document.querySelectorAll('.sidebar');
+        // var category = document.getElementById('category1');
+        // category.style.display = 'none';
+
+        showButton.addEventListener('click', function () {
+            elements.forEach(function (element) {
+                element.style.display = 'block';
+            });
+        });
+
+        closeButton.addEventListener('click', function () {
+            elements.forEach(function (element) {
+                element.style.display = 'none';
+            });
+        });
+        elements.forEach(function (element) {
+            element.style.display = 'none';
+        });
+    });
+</script>
+</body>
+
+</html>
